@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text } from 'ink';
+import { Box, Text } from 'ink';
 
 const figlet = `
 ███████╗ █████╗ ███╗   ███╗██╗     ███████╗███████╗███████╗
@@ -10,10 +10,19 @@ const figlet = `
 ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝╚══════╝╚══════╝╚══════╝
 `
 export const SamlessBanner = (props: { footer: string }) => {
+
+  const AWS_ORANGE_COLOR = "#FE9900";
+
   return (
-    <Text>
-      <Text color={"#FE9900"}>{figlet}</Text>
-      <Text> {props.footer}</Text>
-    </Text>
+    <Box 
+      borderStyle="round" 
+      padding={1} 
+      borderColor={AWS_ORANGE_COLOR}  
+      width={40}
+      flexDirection="column"
+    >
+      <Text bold color={AWS_ORANGE_COLOR}>Welcome to Samless</Text>
+      <Text>{props.footer}</Text>
+    </Box>
   )
 };

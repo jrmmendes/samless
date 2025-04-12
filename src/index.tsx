@@ -8,8 +8,6 @@ import { logger } from './infra/logger';
 import packageDetails from '../package.json';
 
 logger.info({ status: 'clear console' });
-console.clear();
-logger.info({ status: 'start samless' });
 
 try {
   const { waitUntilExit } = render(
