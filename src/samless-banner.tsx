@@ -13,7 +13,7 @@ const figlet = `
 export const SamlessBanner = () => {
   return (
     <Text>
-      <Text>{figlet}</Text>
+      <Text color={"#FE9900"}>{figlet}</Text>
       <Text> {packageDetails.name}</Text>
     </Text>
   )
