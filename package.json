@@ -2,7 +2,9 @@
   "version": "0.1.0",
   "name": "@mnds/samless",
   "type": "module",
-  "private": true,
+  "bin": {
+    "samless": "./samless.js"
+  },
   "scripts": {
     "build": "tsup",
     "start": "node dist/index.js"
@@ -17,6 +19,7 @@
   },
   "devDependencies": {
     "@types/bun": "latest",
+    "@types/node": "^22.14.1",
     "tsup": "^8.4.0"
   },
   "peerDependencies": {
@@ -24,8 +27,10 @@
   },
   "dependencies": {
     "@types/ink": "^2.0.3",
+    "@types/pino": "^7.0.5",
     "@types/react": "^19.1.1",
     "ink": "^5.2.0",
+    "pino": "^9.6.0",
     "react": "18",
     "react-devtools-core": "^6.1.1"
   }

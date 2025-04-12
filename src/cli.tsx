@@ -13,5 +13,4 @@ export const Cli = ({ name, version }: PackageDetails) => {
       <SamlessBanner footer={`${name}@${version}`}/>
     </Box>
   )
-
 }
