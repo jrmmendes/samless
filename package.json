@@ -1,13 +1,17 @@
 {
   "version": "0.1.0",
-  "name": "@mnds/samless",
+  "name": "@jrmmendes/samless",
   "type": "module",
+  "author": "jrmmendes <jrmmendes@outlook.com>",
+  "license": "MIT",
+  "description": "AWS SAM CLI wrapper with improved DX",
   "bin": {
     "samless": "./samless.js"
   },
   "scripts": {
     "build": "tsup",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "prepublishOnly": "npm run build"
   },
   "tsup": {
     "entry": ["src"],
@@ -35,5 +39,14 @@
     "pino": "^9.6.0",
     "react": "18",
     "react-devtools-core": "^6.1.1"
+  },
+  "files": [
+    "dist",
+    "samless.js"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   }
 }
