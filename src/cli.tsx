@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Box, Text } from 'ink';
 import TextInput from 'ink-text-input';
 import { SamlessBanner } from './components/samless-banner';
@@ -11,7 +11,6 @@ type PackageDetails = {
 export const Cli = ({ name, version }: PackageDetails) => {
 
   const [command, setCommand] = useState('')
-
 
   return (
     <Box width={80} padding={1} flexDirection="column">

@@ -1,4 +1,3 @@
-import React from 'react';
 import { exit } from 'process';
 import { render,  } from 'ink';
 
@@ -6,8 +5,6 @@ import { Cli } from './cli';
 import { logger } from './infra/logger';
 
 import packageDetails from '../package.json';
-
-logger.info({ status: 'clear console' });
 
 try {
   const { waitUntilExit } = render(
