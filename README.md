@@ -6,11 +6,12 @@
 ███████║██║  ██║██║ ╚═╝ ██║███████╗███████╗███████║███████║
 ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝╚══════╝╚══════╝╚══════╝
 ```
+![NPM Version](https://img.shields.io/npm/v/%40jrmmendes%2Fsamless)
 
 Use AWS SAM with improved DX. Install with:
 
 ```bash
-npm i -g @mendes/samless
+npm i -g @jrmmendes/samless
 ````
 
 ## Development
