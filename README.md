@@ -1,4 +1,11 @@
 # samless
+Use AWS SAM with improved DX. Install with:
+
+```bash
+npm i -g @mendes/samless
+````
+
+## Development
 
 To install dependencies:
 
@@ -6,10 +13,15 @@ To install dependencies:
 bun install
 ```
 
+To build:
+
+```bash
+bun run build
+
+```
 To run:
 
 ```bash
-bun run index.ts
-```
+bun run start
 
-This project was created using `bun init` in bun v1.2.9. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+```
