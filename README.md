@@ -6,7 +6,7 @@
 ███████║██║  ██║██║ ╚═╝ ██║███████╗███████╗███████║███████║
 ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝╚══════╝╚══════╝╚══════╝
 ```
-![NPM Version](https://img.shields.io/npm/v/%40jrmmendes%2Fsamless)
+[![NPM Version](https://img.shields.io/npm/v/%40jrmmendes%2Fsamless)](https://www.npmjs.com/package/@jrmmendes/samless)
 
 Use AWS SAM with improved DX. Install with:
 
