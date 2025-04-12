@@ -1,19 +1,22 @@
 {
-  "name": "samless",
-  "module": "index.ts",
+  "name": "@mnds/samless",
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "babel src/index.tsx -o cli.js"
+    "build": "tsup",
+    "start": "node dist/index.js"
+  },
+  "tsup": {
+    "entry": ["src"],
+    "outDir": "dist",
+    "format": ["esm"],
+    "bundle": true,
+    "platform": "node",
+    "target": "esnext"
   },
   "devDependencies": {
-    "@babel/cli": "^7.27.0",
-    "@babel/core": "^7.26.10",
-    "@babel/preset-env": "^7.26.9",
-    "@babel/preset-react": "^7.26.3",
-    "@babel/preset-typescript": "^7.27.0",
     "@types/bun": "latest",
-    "babel": "^6.23.0"
+    "tsup": "^8.4.0"
   },
   "peerDependencies": {
     "typescript": "^5"
@@ -21,6 +24,7 @@
   "dependencies": {
     "@types/react": "^19.1.1",
     "ink": "^5.2.0",
-    "react": "18"
+    "react": "18",
+    "react-devtools-core": "^6.1.1"
   }
 }
