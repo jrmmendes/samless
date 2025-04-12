@@ -1,8 +1,13 @@
 import React from 'react';
-import { render, Text } from 'ink';
-import { SamlessBanner } from './samless-banner';
+import { render,  } from 'ink';
+import { Cli } from './cli';
+import packageDetails from '../package.json';
 
+console.clear();
 
-const Demo = () => <Text> <SamlessBanner/> </Text>
-
-render(<Demo/>)
+render(
+  <Cli 
+    name={packageDetails.name}
+    version={packageDetails.version}
+  />
+)

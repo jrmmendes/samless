@@ -1,6 +1,5 @@
 import React from 'react';
-import { Box, Text } from 'ink';
-import packageDetails from '../package.json';
+import { Text } from 'ink';
 
 const figlet = `
 ███████╗ █████╗ ███╗   ███╗██╗     ███████╗███████╗███████╗
@@ -10,11 +9,11 @@ const figlet = `
 ███████║██║  ██║██║ ╚═╝ ██║███████╗███████╗███████║███████║
 ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝╚══════╝╚══════╝╚══════╝
 `
-export const SamlessBanner = () => {
+export const SamlessBanner = (props: { footer: string }) => {
   return (
     <Text>
       <Text color={"#FE9900"}>{figlet}</Text>
-      <Text> {packageDetails.name}</Text>
+      <Text> {props.footer}</Text>
     </Text>
   )
 };
