@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "name": "@jrmmendes/samless",
   "type": "module",
   "author": "jrmmendes <jrmmendes@outlook.com>",
@@ -14,13 +14,19 @@
     "prepublishOnly": "npm run build"
   },
   "tsup": {
-    "entry": ["src"],
+    "entry": [
+      "src"
+    ],
     "outDir": "dist",
-    "format": ["esm"],
+    "format": [
+      "esm"
+    ],
     "bundle": true,
     "platform": "node",
     "target": "esnext",
-    "ignore": ["src/*.log"]
+    "ignore": [
+      "src/*.log"
+    ]
   },
   "devDependencies": {
     "@types/bun": "latest",
