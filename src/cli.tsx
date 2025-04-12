@@ -16,7 +16,10 @@ export const Cli = ({ name, version }: PackageDetails) => {
 
   useInput((input, key) => {
     if (key.return && command === ':h') {
-      setOutput(':q - Quit Samless');
+      setOutput(
+        ':q - Quit samless\n'+
+        ':h - Show this help'
+      );
     }
     if (key.return && command === ':q') {
       process.exit(0);
@@ -37,10 +40,11 @@ export const Cli = ({ name, version }: PackageDetails) => {
   }, [command])
 
   return (
-    <Box width={80} padding={1} flexDirection="column">
+    <Box width={80} paddingX={1} flexDirection="column">
       <SamlessBanner 
         cwd={process.cwd()}
-        footer={`${name}@${version}`}
+        name={name}
+        version={version}
       />
 
       <Content>
@@ -50,13 +54,12 @@ export const Cli = ({ name, version }: PackageDetails) => {
       <Box 
         borderStyle="round" 
         borderColor="gray"
-        paddingX={1} 
       >
-        <Text>{"> "}
+        <Text>{" > "}
           <TextInput 
             value={command} 
             onChange={setCommand} 
-            placeholder="try :h commands"
+            placeholder="try :h for help"
           />
         </Text>
       </Box>

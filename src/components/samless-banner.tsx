@@ -8,21 +8,23 @@ const figlet = `
 ███████║██║  ██║██║ ╚═╝ ██║███████╗███████╗███████║███████║
 ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝╚══════╝╚══════╝╚══════╝
 `
-export const SamlessBanner = (props: { footer: string, cwd: string }) => {
+export const SamlessBanner = (props: { name: string, version: string, cwd: string }) => {
 
   const AWS_ORANGE_COLOR = "#FE9900";
 
   return (
     <Box 
       borderStyle="round" 
-      padding={1} 
+      paddingX={1} 
       borderColor={AWS_ORANGE_COLOR}  
-      width={40}
       flexDirection="column"
     >
-      <Text bold color={AWS_ORANGE_COLOR}>Welcome to Samless</Text>
+      <Box paddingBottom={1}>
+        <Text bold color={AWS_ORANGE_COLOR}>Welcome to Samless</Text>
+      </Box>
       <Text>cwd: {props.cwd}</Text>
-      <Text>{props.footer}</Text>
+      <Text>{props.name}</Text>
+      <Text>version: {props.version}</Text>
     </Box>
   )
 };
