@@ -7,6 +7,7 @@ import { logger } from './infra/logger';
 import packageDetails from '../package.json';
 
 try {
+  console.clear()
   const { waitUntilExit } = render(
     <Cli 
       name={packageDetails.name}
