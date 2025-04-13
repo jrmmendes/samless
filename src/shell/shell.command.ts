@@ -1,5 +1,5 @@
-import { init } from '../shell';
+import { init, type PackageDetails } from '@/shell';
 
-export const shellCommandHander = () => {
-  init();
+export const shellCommandHander = (packageDetails: PackageDetails) => {
+  init(packageDetails);
 }

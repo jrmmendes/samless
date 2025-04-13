@@ -1,7 +1,7 @@
 import { Command } from "commander";
 import { version } from '../../package.json';
 
-import { shellCommandHander } from '../shell/shell.command.ts';
+import { shellCommandHander } from '@/shell/shell.command.ts';
 
 export const parse = (argv: string[]) => {
   const program = new Command();

@@ -1,13 +1,10 @@
 import { useEffect, useState } from 'react';
 import { Box, Text, useInput } from 'ink';
 import TextInput from 'ink-text-input';
-import { SamlessBanner } from './components/samless-banner';
-import { Content } from './components/content';
 
-type PackageDetails = {
-  name: string;
-  version: string;
-}
+import { SamlessBanner } from '@/shell/components/samless-banner';
+import { Content } from '@/shell/components/content';
+
 
 export const Application = ({ name, version }: PackageDetails) => {
   const [command, setCommand] = useState('');
