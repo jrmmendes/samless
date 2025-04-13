@@ -14,6 +14,9 @@ Use AWS SAM with improved DX. Install with:
 npm i -g @jrmmendes/samless
 ````
 
+> [!WARNING]
+> samless is in early development stage. Breaking changes are expected.
+
 ## Development
 
 To install dependencies:
