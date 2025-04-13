@@ -22,8 +22,8 @@
     "clear": "rimraf dist",
     "test": "FORCE_COLOR=0 bun test",
     "build": "bun run clear && bun build src/entrypoint.ts --outfile=./dist/bundle.js --target=node --minify",
-    "exec": "node samless.js",
-    "exec:dev": "bun src/entrypoint.ts",
+    "exec": "node ./samless.js",
+    "exec:dev": "bun ./src/entrypoint.ts",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {

@@ -1,15 +1,4 @@
-import { shellCommandHander } from './commands/shell';
+import { parse } from './infra/command-parser';
 
-import { program } from './infra/args.ts';
-
-program.parse(process.argv);
-
-const options = program.opts();
-
-if (options.shell) {
-  shellCommandHander();
-}
-
-else {
-  program.help();
-}
+const command = parse(process.argv);
+command();
