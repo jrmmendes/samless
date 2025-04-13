@@ -21,7 +21,7 @@
   "scripts": {
     "clear": "rimraf dist",
     "build": "bun run clear && tsup --minify",
-    "start": "node dist/index.js",
+    "start": "node dist/entrypoint.js",
     "prepublishOnly": "npm run build"
   },
   "tsup": {
@@ -59,8 +59,6 @@
     "dist",
     "samless.js"
   ],
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   }

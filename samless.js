@@ -1,2 +1,2 @@
 #!/bin/env node
-import('./dist/index.js');
+import('./dist/entrypoint.js');

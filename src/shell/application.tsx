@@ -9,7 +9,7 @@ type PackageDetails = {
   version: string;
 }
 
-export const Cli = ({ name, version }: PackageDetails) => {
+export const Application = ({ name, version }: PackageDetails) => {
   const [command, setCommand] = useState('');
   const [message, setMessage] = useState<string>();
   const [output, setOutput] = useState<string>()
@@ -64,7 +64,6 @@ export const Cli = ({ name, version }: PackageDetails) => {
         </Text>
       </Box>
       <Text color="gray">{message}</Text>
-
     </Box>
   )
 }
