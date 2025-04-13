@@ -34,3 +34,7 @@ To run:
 bun run start
 
 ```
+To run tests:
+```bash
+FORCE_COLOR=0 bun test
+```
