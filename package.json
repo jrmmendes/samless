@@ -22,8 +22,8 @@
     "clear": "rimraf dist",
     "test": "FORCE_COLOR=0 bun test",
     "build": "bun run clear && bun build src/entrypoint.ts --outfile=./dist/bundle.js --target=node --minify",
-    "start:node": "node samless.js",
-    "start:dev": "bun src/entrypoint.ts --watch",
+    "exec": "node samless.js",
+    "exec:dev": "bun src/entrypoint.ts",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
@@ -38,6 +38,7 @@
     "typescript": "^5"
   },
   "dependencies": {
+    "commander": "^13.1.0",
     "ink": "^5.2.0",
     "ink-text-input": "^6.0.0",
     "pino": "^9.6.0",
