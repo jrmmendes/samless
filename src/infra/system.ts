@@ -2,7 +2,13 @@ import { spawn } from "node:child_process";
 import { logger } from "./logger";
 
 export const ExitCode = {
-  SUCCESS: 0,
+  SUCCESS: 0, // Successful execution
+  GENERIC_ERROR: 1, // Generic error
+  INCORECT_USAGE: 2, // Incorrect usage of a command
+  NOT_EXECUTABLE: 126, // Command invoked cannot execute
+  NOT_FOUND: 127, // Command not found
+  SIGINT: 130, // Terminated by Control-C (SIGINT)
+  SIGTERM: 143, // Terminated by SIGTERM
 } as const;
 
 export class System {
