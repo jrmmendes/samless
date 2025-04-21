@@ -1,8 +1,6 @@
 import { exit } from 'process';
 import { render } from 'ink';
 
-import { logger } from '@/infra/logger';
-
 import { Application } from '@/shell/application';
 
 export type PackageDetails = {
@@ -21,7 +19,7 @@ export const init = async (args: PackageDetails) => {
     )
     await waitUntilExit();
   } catch(error) {
-    logger.error({ status: 'app exited with error', error });
+    console.error({ status: 'app exited with error', error });
     exit(1);
   }
 }

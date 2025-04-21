@@ -1,10 +1,12 @@
-import pino from 'pino';
 
-export const logger = pino({
-  transport: {
-    target: 'pino/file',
-    options: {
-      destination: './logs.log' // Path to the log file
-    }
-  }
-});
+const ifNotTest = (method: Function) => {
+  const silentLogger = (...arg: unknown[]) => {}
+  return process.env.NODE_ENV?.toUpperCase() === 'TEST' ? silentLogger : method;
+
+}
+
+export const logger = {
+  info: ifNotTest(console.log),
+  error: ifNotTest(console.error),
+  warn: ifNotTest(console.warn),
+}
