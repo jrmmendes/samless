@@ -1,7 +1,7 @@
 import { spawn } from "node:child_process";  
 import { logger } from "./logger";
 
-export const ExitCode = {
+export const ExitCodes = {
   SUCCESS: 0, // Successful execution
   GENERIC_ERROR: 1, // Generic error
   INCORECT_USAGE: 2, // Incorrect usage of a command
@@ -11,8 +11,10 @@ export const ExitCode = {
   SIGTERM: 143, // Terminated by SIGTERM
 } as const;
 
+export type ExitCode = (typeof ExitCodes)[keyof typeof ExitCodes];
+
 export class System {
-  static async exec(command: string, args: string[]): Promise<[unknown[], unknown[], number | null]> {
+  static async exec(command: string, args?: string[]): Promise<[unknown[], unknown[], number | null]> {
     const execution = spawn(command, args);
 
     logger.info({ command });
