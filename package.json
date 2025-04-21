@@ -23,7 +23,7 @@
     "test": "FORCE_COLOR=0 bun test",
     "test:html": "bun run test && bun run g:lcov-html",
     "test:html:open": "bun run test:html && xdg-open ./coverage/html/index.html",
-    "build": "bun run clear && bun build src/entrypoint.ts --outfile=./dist/bundle.js --target=node --minify",
+    "build": "bun run clear && bun build src/entrypoint.ts --outfile=./dist/bundle.js --target=node --format=esm --minify",
     "exec": "node ./samless.js",
     "exec:dev": "bun ./src/entrypoint.ts",
     "prepublishOnly": "npm run build",
