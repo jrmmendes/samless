@@ -1,5 +1,5 @@
 import { logger } from "@/infra/logger";
-import { ExitCode, System } from "@/infra/system"
+import { ExitCodes, System } from "@/infra/system"
 
 export const checkCommandHandler = async () => {
   const [data, error, code] = await System.exec('docker', ['--version']);
@@ -11,7 +11,7 @@ export const checkCommandHandler = async () => {
     code,
   });
 
-  if (code !== ExitCode.SUCCESS) {
+  if (code !== ExitCodes.SUCCESS) {
     logger.error({
       name: 'docker',
       code,
